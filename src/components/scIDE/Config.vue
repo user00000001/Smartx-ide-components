@@ -368,7 +368,7 @@
               <div class="input-group">
                 <input :type="[isShowPassword ? 'text' : 'password']"
                        v-model="password"
-                       v-validate data-vv-rules="required|min:6"
+                       v-validate data-vv-rules="required|min:1"
                        class="form-control deploy-input" name="password" :placeholder="$t('deploy.enterPw')">
                 <div class="input-group-append deploy-input-group-append" @click="viewPassword">
                     <span class="input-group-text">

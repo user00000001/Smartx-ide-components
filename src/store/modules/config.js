@@ -3,7 +3,8 @@ const address = sessionStorage.getItem('smartx_address') || ''
 const privateKey = sessionStorage.getItem('smartx_privateKey') || ''
 const state = {
     network: 'TEST_NET',
-    nodeUrl: 'polaris1.ont.io',
+    nodeUrl: 'localhost',
+    // nodeUrl: 'polaris1.ont.io',
     wallet: {
         address,
         privateKey,
@@ -18,9 +19,11 @@ const mutations = {
     ['CHANGE_CONFIG_NETWORK'](state, {network, url}) {
         state.network = network;
         if (network === 'TEST_NET') {
-            state.nodeUrl = 'polaris1.ont.io'
+            state.nodeUrl = 'localhost'
+            // state.nodeUrl = 'polaris1.ont.io'
         } else if (network === 'MAIN_NET') {
-            state.nodeUrl = 'dappnode1.ont.io'
+            state.nodeUrl = 'localhost'
+            // state.nodeUrl = 'dappnode1.ont.io'
         }
         if(url) {
             state.nodeUrl = url
@@ -49,7 +52,8 @@ const actions = {
             alert('Please choose a wallet file.')
             return;
         }
-        let node =  'https://' + state.nodeUrl + ':10334'
+        let node =  'http://' + state.nodeUrl + ':25770'
+        // let node =  'https://' + state.nodeUrl + ':10334'
         if(state.network === 'PRIVATE_NET') {
             node =  state.nodeUrl + ':20334'
         }

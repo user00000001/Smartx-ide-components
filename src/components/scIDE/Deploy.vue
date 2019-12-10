@@ -312,7 +312,8 @@
         if(this.network === 'PRIVATE_NET') {
           url = this.nodeUrl + ':20334'
         } else {
-          url = 'https://' +  this.nodeUrl + ':10334'
+          url = 'http://' +  this.nodeUrl + ':25770'
+//          url = 'https://' +  this.nodeUrl + ':10334'
         }
          const restClient = new Ont.RestClient(url);
 
