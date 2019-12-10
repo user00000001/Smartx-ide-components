@@ -32,6 +32,21 @@ const router = new Router({
   routes: routes
 })
 
+// router.beforeEach((to,from , next)=> {
+//   let payload = {
+//     projectName : "model",
+//     language : "1",
+//   }
+//   Store.dispatch('setProjectName',payload)
+//   let payload_projectInfo = {
+//     projectName : "model",
+//     language : "CSharp"
+//   }
+//   Store.dispatch('setProjectInfo',payload_projectInfo)
+
+//   next()
+// })
+
 router.beforeEach((to,from , next)=> {
   let payload = {
     projectName : "model",

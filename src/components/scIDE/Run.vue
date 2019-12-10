@@ -698,9 +698,11 @@
           Ont.TransactionBuilder.signTransaction(tx, privateKey);
           let url = ''
           if(this.network === 'PRIVATE_NET') {
-            url =  'ws://' + this.nodeUrl.split('//')[1] + ':20335'
+            url =  'ws://' + this.nodeUrl.split('//')[1] + ':25771'
+//            url =  'ws://' + this.nodeUrl.split('//')[1] + ':20335'
           } else {
-            url = 'ws://' +  this.nodeUrl + ':20335'
+            url = 'ws://' +  this.nodeUrl + ':25771'
+//            url = 'ws://' +  this.nodeUrl + ':20335'
           }
           const socketClient = new Ont.WebsocketClient(url);
           try {
